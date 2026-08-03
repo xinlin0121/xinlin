@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>信林企業股份有限公司</title>
+<meta name="description" content="信林企業為士林電機關係企業與新竹物流合作夥伴，提供倉儲物流、包裝加工及專業人力派遣服務。熱烈徵才中！">
+
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Google Fonts：Noto Sans TC（中文主字體）／ Space Grotesk（英數標籤）／ JetBrains Mono（數據、Eyebrow） -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          paper:   '#FFFFFF',   // 主背景（白）
+          ink:     '#12151A',   // 主要文字（近黑）
+          mute:    '#63676F',   // 次要文字（灰）
+          hair:    '#E3E5E9',   // 分隔線／卡片邊框（淺灰）
+          panel:   '#F5F6F8',   // 淺灰底色區塊
+          blue:    '#1E4FD8',   // 主藍色板塊
+          blueDeep: '#12318C', // 深藍（hover / 對比）
+          blueSoft: '#EAF0FD', // 極淺藍底
+        },
+        fontFamily: {
+          display: ['"Noto Sans TC"', '"Space Grotesk"', 'sans-serif'],
+          body: ['"Noto Sans TC"', 'sans-serif'],
+          mono: ['"JetBrains Mono"', 'monospace'],
+        },
+      },
+    },
+  }
+</script>
+
+<style>
+  html { -webkit-font-smoothing: antialiased; }
+  body { background-color: #FFFFFF; }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #FFFFFF; }
+  ::-webkit-scrollbar-thumb { background: #E3E5E9; }
+
+  /* 簽名視覺元素：藍色實心板塊，作為標題文字背後的錨定圖形 */
+  .block-accent {
+    position: relative;
+    display: inline-block;
+    padding: 0.05em 0.2em;
+  }
+  .block-accent::before {
+    content: '';
+    position: absolute;
+    top: -0.05em;
+    bottom: -0.05em;
+    left: -0.15em;
+    right: -0.15em;
+    background-color: #1E4FD8;
+    z-index: -1;
+  }
+
+  /* 卡片左上角的藍色板塊編號標籤 */
+  .tag-block {
+    background-color: #1E4FD8;
+    color: #FFFFFF;
+  }
+
+  .card-hover { transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; }
+  .card-hover:hover {
+    border-color: #1E4FD8;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px -12px rgba(18,21,26,0.18);
+  }
+
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+  }
+</style>
+</head>
+
+<body class="bg-paper text-ink font-body antialiased selection:bg-blue selection:text-white">
+
+<!-- Header / Navigation 導覽列 -->
+<header class="fixed top-0 left-0 w-full z-50 border-b border-hair bg-paper/90 backdrop-blur-md">
+  <div class="max-w-6xl mx-auto px-6 md:px-10 h-16 md:h-20 flex items-center justify-between">
+
+    <!-- 品牌 Logo -->
+    <a href="#top" class="flex items-center gap-3 group">
+      <img src="信林LOGO.jpg" alt="信林 Logo" class="h-16 md:h-20 w-auto object-contain">
+    </a>
+
+    <!-- 桌面版導覽連結 -->
+    <nav class="hidden md:flex items-center gap-10 font-mono text-xs uppercase tracking-widest text-mute">
+      <a href="#about" class="hover:text-blue transition-colors">關於信林</a>
+      <a href="#recruitment" class="hover:text-blue transition-colors">人才招募</a>
+      <a href="#contact" class="hover:text-blue transition-colors">聯絡我們</a>
+    </nav>
+
+    <!-- 桌面版 CTA 按鈕 -->
+    <a href="#contact" class="hidden md:inline-flex items-center gap-2 bg-blue text-white text-xs font-mono uppercase tracking-widest px-5 py-2.5 hover:bg-blueDeep transition-colors">
+      立即諮詢
+    </a>
+
+    <!-- 手機版漢堡選單按鈕 -->
+    <button id="menu-btn" aria-label="開啟選單" aria-expanded="false" class="md:hidden flex flex-col gap-1.5 w-8 h-8 items-center justify-center">
+      <span id="bar1" class="block w-6 h-0.5 bg-ink transition-transform duration-300"></span>
+      <span id="bar2" class="block w-6 h-0.5 bg-ink transition-opacity duration-300"></span>
+      <span id="bar3" class="block w-6 h-0.5 bg-ink transition-transform duration-300"></span>
+    </button>
+  </div>
+
+  <!-- 手機版下拉選單 -->
+  <div id="mobile-menu" class="md:hidden hidden flex-col border-t border-hair bg-paper px-6 py-6 gap-1 font-mono text-sm uppercase tracking-widest text-mute">
+    <a href="#about" class="py-3 border-b border-hair hover:text-blue transition-colors">關於信林</a>
+    <a href="#recruitment" class="py-3 border-b border-hair hover:text-blue transition-colors">人才招募</a>
+    <a href="#contact" class="py-3 hover:text-blue transition-colors">聯絡我們</a>
+    <a href="#contact" class="mt-4 inline-flex items-center justify-center bg-blue text-white text-xs px-5 py-3 hover:bg-blueDeep transition-colors">立即諮詢</a>
+  </div>
+</header>
+
+<!-- Hero Section 主視覺區塊 -->
+<section id="top" class="relative pt-32 md:pt-40 pb-20 md:pb-28 px-6 md:px-10 overflow-hidden">
+  <div class="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
+
+    <div class="lg:col-span-8">
+      <p class="font-mono text-xs uppercase tracking-[0.3em] text-blue mb-6 reveal">
+        Xinlin Group — 專業 · 信任
+      </p>
+
+      <h1 class="reveal font-display font-black text-[12vw] sm:text-6xl md:text-7xl leading-[1.15] tracking-tight text-ink">
+        以信立本，
+        <span class="block-accent text-white">深耕如林</span>
+      </h1>
+
+      <p class="mt-8 max-w-xl text-base md:text-lg text-mute leading-relaxed reveal">
+        信林致力於提供穩健可靠的專業服務，結合豐富產業經驗與嚴謹的執行團隊，
+        陪伴每一位夥伴。
+      </p>
+
+      <div class="mt-10 flex flex-wrap items-center gap-4 reveal">
+        <a href="#recruitment" class="inline-flex items-center gap-3 bg-blue text-white font-mono text-xs uppercase tracking-widest px-7 py-4 hover:bg-blueDeep transition-colors">
+          我要應徵
+          <span aria-hidden="true">→</span>
+        </a>
+        <a href="#about" class="inline-flex items-center gap-3 border border-ink/20 text-ink font-mono text-xs uppercase tracking-widest px-7 py-4 hover:border-blue hover:text-blue transition-colors">
+          了解信林
+        </a>
+      </div>
+    </div>
+
+    <div class="lg:col-span-4 reveal hidden lg:block">
+      <div class="bg-blue aspect-[4/5] w-full flex flex-col justify-between p-8 text-white">
+        <p class="font-mono text-xs uppercase tracking-widest text-white/70">Since</p>
+        <p class="font-display text-6xl font-bold leading-none">2026</p>
+        <p class="text-sm text-white/80 leading-relaxed">
+          從第一天開始，我們就以「信」為名，
+          與每位夥伴攜手前行，共同成為值得信賴的物流夥伴。
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="max-w-6xl mx-auto mt-20 grid grid-cols-3 border-t border-hair pt-6 gap-4 reveal">
+    <div>
+      <p class="font-display text-2xl md:text-3xl font-bold text-ink">150+</p>
+      <p class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-mute mt-1">合作企業</p>
+    </div>
+    <div>
+      <p class="font-display text-2xl md:text-3xl font-bold text-ink">15</p>
+      <p class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-mute mt-1">年產業經驗</p>
+    </div>
+    <div>
+      <p class="font-display text-2xl md:text-3xl font-bold text-ink">97%</p>
+      <p class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-mute mt-1">客戶滿意度</p>
+    </div>
+  </div>
+</section>
+
+<!-- About Section 關於信林 -->
+<section id="about" class="border-t border-hair px-6 md:px-10 py-24 md:py-32 bg-panel">
+  <div class="max-w-6xl mx-auto">
+
+    <p class="font-mono text-xs uppercase tracking-[0.3em] text-blue mb-4 reveal">01 / 關於信林</p>
+
+    <h2 class="font-display text-3xl md:text-5xl font-bold tracking-tight text-ink max-w-2xl mb-8 reveal">
+      我們用專業，
+      <span class="text-blue">為每一次決策把關</span>
+    </h2>
+
+    <p class="text-mute leading-relaxed max-w-2xl text-sm md:text-base reveal">
+      信林成立於 2026 年，由一群深耕產業多年的專業顧問組成，我們相信穩健的服務態度，
+      才是長期合作關係的基礎。從策略規劃、財務管理到人才發展，信林以嚴謹的專業與真誠的態度，
+      陪伴每一位客戶與夥伴走過關鍵決策時刻，成為值得長期託付的夥伴。
+    </p>
+
+  </div>
+</section>
+
+<!-- Recruitment Section 人才招募區塊 -->
+<section id="recruitment" class="border-t border-hair px-6 md:px-10 py-24 md:py-32 bg-blue text-white">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 reveal">
+      <div>
+        <p class="font-mono text-xs uppercase tracking-[0.3em] text-white/70 mb-4">02 / 人才招募</p>
+        <h2 class="font-display text-3xl md:text-5xl font-bold tracking-tight max-w-2xl">
+          與信林同行，
+          <span class="text-white/70">共創穩定職涯</span>
+        </h2>
+      </div>
+      <p class="text-white/80 leading-relaxed max-w-sm text-sm md:text-base">
+        我們重視每一位夥伴的成長，提供完整的教育訓練與清楚的晉升路徑，
+        歡迎對專業服務有熱忱的您加入我們。
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+      <!-- 職缺列表卡片 -->
+      <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4 reveal">
+
+        <a href="https://www.chickpt.com.tw/job-qr3mAMqzqm7P" target="_blank" rel="noopener noreferrer"
+           class="group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
+          <div class="flex items-start justify-between gap-2 mb-2">
+            <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
+            <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
+          </div>
+          <h3 class="font-display font-bold text-lg mb-2">晚班 · 高雄前鎮</h3>
+          <p class="text-sm text-mute leading-relaxed">能接受搬運及理貨工作，具良好體能與工作熱忱，積極學習、態度佳，歡迎應徵。</p>
+        </a>
+
+        <a href="https://www.chickpt.com.tw/job-noj1W892r5bO" target="_blank" rel="noopener noreferrer"
+           class="group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
+          <div class="flex items-start justify-between gap-2 mb-2">
+            <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
+            <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
+          </div>
+          <h3 class="font-display font-bold text-lg mb-2">中班 · 高雄鳳山</h3>
+          <p class="text-sm text-mute leading-relaxed">無經驗可，只要願意學習、工作認真、態度積極，我們提供完整教育訓練，歡迎加入。</p>
+        </a>
+
+        <a href="https://www.chickpt.com.tw/job-QjnmzDBqR5p9" target="_blank" rel="noopener noreferrer"
+           class="group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
+          <div class="flex items-start justify-between gap-2 mb-2">
+            <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
+            <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
+          </div>
+          <h3 class="font-display font-bold text-lg mb-2">大夜 · 台南永康</h3>
+          <p class="text-sm text-mute leading-relaxed">具備良好的時間觀念，工作認真細心，能獨立完成工作並配合團隊運作，長期任職者佳。</p>
+        </a>
+
+        <a href="https://www.104.com.tw/jobs/search/" target="_blank" rel="noopener noreferrer"
+           class="group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
+          <div class="flex items-start justify-between gap-2 mb-2">
+            <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
+            <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
+          </div>
+          <h3 class="font-display font-bold text-lg mb-2">大夜 · 新竹竹北</h3>
+          <p class="text-sm text-mute leading-relaxed">誠徵願意投入物流理貨工作的夥伴，具責任感、抗壓性佳、不怕辛苦，期待與您一起成長。</p>
+        </a>
+
+        <a href="https://www.chickpt.com.tw/job-r6b0D9aqYm82" target="_blank" rel="noopener noreferrer"
+           class="group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
+          <div class="flex items-start justify-between gap-2 mb-2">
+            <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
+            <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
+          </div>
+          <h3 class="font-display font-bold text-lg mb-2">大夜 · 彰化和美</h3>
+          <p class="text-sm text-mute leading-relaxed">誠徵願意投入物流理貨工作的夥伴，具責任感、抗壓性佳、不怕辛苦，期待與您一起成長。</p>
+        </a>
+
+      </div>
+
+      <!-- 應徵方式說明 -->
+      <div class="reveal border-t lg:border-t-0 lg:border-l border-white/20 pt-10 lg:pt-0 lg:pl-10">
+        <h3 class="font-display font-bold text-lg mb-3">應徵方式</h3>
+       <p class="text-sm text-white/85 leading-relaxed mb-6">
+  請將履歷寄至：<span class="font-semibold underline">xinlin20000121@gmail.com</span>，我們將於 5 個工作天內回覆面試安排。
+</p>
+<a href="mailto:xinlin20000121@gmail.com" class="inline-flex items-center gap-3 bg-white text-black px-4 py-2 rounded-lg font-medium">
+  寄送履歷 <span>→</span>
+</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section 聯絡資訊 -->
+<section id="contact" class="border-t border-hair px-6 md:px-10 py-24 md:py-32">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="reveal max-w-lg">
+      <p class="font-mono text-xs uppercase tracking-[0.3em] text-blue mb-4">03 / 聯絡我們</p>
+      <h2 class="font-display text-3xl md:text-5xl font-bold tracking-tight text-ink mb-6">
+        準備好開始了嗎？
+        <span class="block text-blue">讓信林陪您走這一段。</span>
+      </h2>
+      <p class="text-mute leading-relaxed mb-10 text-sm md:text-base">
+        無論您正在尋找物流理貨工作，或想了解更多職缺資訊，歡迎與我們聯繫，我們將於一個工作天內回覆您。
+      </p>
+
+      <ul class="space-y-4 font-mono text-sm">
+        <li class="flex items-center gap-4 border-b border-hair pb-4">
+          <span class="text-mute w-20 shrink-0">EMAIL</span>
+          <a href="mailto:xinlin20000121@gmail.com" class="text-ink hover:text-blue transition-colors">xinlin20000121@gmail.com</a>
+        </li>
+        <li class="flex items-center gap-4 border-b border-hair pb-4">
+          <span class="text-mute w-20 shrink-0">電話</span>
+          <a href="tel:+88635591589" class="text-ink hover:text-blue transition-colors">(03)5591-589</a>
+        </li>
+        <li class="flex items-center gap-4 border-b border-hair pb-4">
+          <span class="text-mute w-20 shrink-0">地址</span>
+          <span class="text-ink">台北市士林區中山北路6段90號12樓</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer 頁尾 -->
+<footer class="border-t border-hair px-6 md:px-10 py-10 bg-panel">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+
+    <div class="flex items-center gap-3 order-2 md:order-1">
+      <img src="信林LOGO.jpg" alt="信林 Logo" class="h-7 w-auto object-contain">
+      <p class="font-mono text-xs text-mute">© 2026 信林企業股份有限公司 保留所有權利。</p>
+    </div>
+
+  </div>
+</footer>
+
+<!-- JavaScript 功能：選單切換 ＋ 淡入效果 ＋ 自動生成 JSON-LD 結構化資料 -->
+<script>
+  // 手機版選單開關
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const bar1 = document.getElementById('bar1');
+  const bar2 = document.getElementById('bar2');
+  const bar3 = document.getElementById('bar3');
+  let menuOpen = false;
+
+  menuBtn.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+    menuBtn.setAttribute('aria-expanded', String(menuOpen));
+    mobileMenu.classList.toggle('hidden', !menuOpen);
+    mobileMenu.classList.toggle('flex', menuOpen);
+    bar1.style.transform = menuOpen ? 'translateY(6.5px) rotate(45deg)' : '';
+    bar3.style.transform = menuOpen ? 'translateY(-6.5px) rotate(-45deg)' : '';
+    bar2.style.opacity = menuOpen ? '0' : '1';
+  });
+
+  document.querySelectorAll('#mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      menuOpen = false;
+      mobileMenu.classList.add('hidden');
+      mobileMenu.classList.remove('flex');
+      bar1.style.transform = '';
+      bar3.style.transform = '';
+      bar2.style.opacity = '1';
+    });
+  });
+
+  // 捲動進場淡入效果（IntersectionObserver）
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });   
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => observer.observe(el));
+
+  // 自動根據 HTML 職缺卡片生成 JSON-LD 結構化資料
+  window.addEventListener('DOMContentLoaded', () => {
+    const jobCards = document.querySelectorAll('#recruitment a[href*="chickpt"], #recruitment a[href*="104"]');
+    const jobPostings = [];
+
+    jobCards.forEach((card, index) => {
+      const category = card.querySelector('p.font-mono')?.textContent.trim() || '物流理貨人員';
+      const subtitle = card.querySelector('h3')?.textContent.trim() || ''; // 例："晚班 · 高雄前鎮"
+      const description = card.querySelector('p.text-sm')?.textContent.trim() || '';
+      const url = card.getAttribute('href') || '';
+
+      // 解析班別與地點（如："晚班" 與 "高雄前鎮"）
+      const parts = subtitle.split('·').map(s => s.trim());
+      const shift = parts[0] || '';
+      const locationStr = parts[1] || '';
+
+      jobPostings.push({
+        "@context": "https://schema.org/",
+        "@type": "JobPosting",
+        "title": `${category}（${shift}）`,
+        "description": description,
+        "identifier": {
+          "@type": "PropertyValue",
+          "name": "信林企業股份有限公司",
+          "value": `JOB-AUTO-${index + 1}`
+        },
+        "datePosted": "2026-07-30",
+        "employmentType": "FULL_TIME",
+        "hiringOrganization": {
+          "@type": "Organization",
+          "name": "信林企業股份有限公司",
+          "sameAs": url
+        },
+        "jobLocation": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": locationStr,
+            "addressCountry": "TW"
+          }
+        },
+        "workHours": shift
+      });
+    });
+
+    // 動態將產生好的 JSON-LD 注入到 <head> 區塊中
+    if (jobPostings.length > 0) {
+      const script = document.createElement('script');
+      script.type = 'application/ld+json';
+      script.text = JSON.stringify(jobPostings, null, 2);
+      document.head.appendChild(script);
+    }
+  });
+</script>
+
+</body>
+</html>
