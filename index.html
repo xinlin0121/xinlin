@@ -158,7 +158,7 @@
     <div class="lg:col-span-4 reveal hidden lg:block">
       <div class="bg-blue aspect-[4/5] w-full flex flex-col justify-between p-8 text-white">
         <p class="font-mono text-xs uppercase tracking-widest text-white/70">Since</p>
-        <p class="font-display text-6xl font-bold leading-none">2026</p>
+        <p class="font-display text-6xl font-bold leading-none">2000</p>
         <p class="text-sm text-white/80 leading-relaxed">
           從第一天開始，我們就以「信」為名，
           與每位夥伴攜手前行，共同成為值得信賴的物流夥伴。
@@ -174,7 +174,7 @@
       <p class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-mute mt-1">合作企業</p>
     </div>
     <div>
-      <p class="font-display text-2xl md:text-3xl font-bold text-ink">15</p>
+      <p class="font-display text-2xl md:text-3xl font-bold text-ink">26</p>
       <p class="font-mono text-[10px] md:text-xs uppercase tracking-widest text-mute mt-1">年產業經驗</p>
     </div>
     <div>
@@ -195,10 +195,22 @@
       <span class="text-blue">為每一次決策把關</span>
     </h2>
 
-    <p class="text-mute leading-relaxed max-w-2xl text-sm md:text-base reveal">
-      信林成立於 2026 年，由一群深耕產業多年的專業顧問組成，我們相信穩健的服務態度，
-      才是長期合作關係的基礎。從策略規劃、財務管理到人才發展，信林以嚴謹的專業與真誠的態度，
-      陪伴每一位客戶與夥伴走過關鍵決策時刻，成為值得長期託付的夥伴。
+    <div class="text-mute leading-relaxed max-w-2xl text-sm md:text-base reveal space-y-4">
+  <p>
+    信林企業股份有限公司成立於西元 2000 年，為士林電機關係企業，並與國內各大知名物流業、製造業及高科技產業建立長期合作關係。我們憑藉全台完善的營運網路與豐富的實務經驗，持續為客戶提供高效率且值得信賴的專業服務。
+  </p>
+  
+  <p>
+    我們專注於提供倉儲物流理貨、人力服務、機械設備安裝及清潔綠化等項目。在信林，理貨工作不只是搬運貨物，更包含貨物整理、分類、拆櫃、裝卸、出入庫作業及現場協作等，每一位夥伴都是物流運作不可或缺的重要角色。
+  </p>
+  
+  <p>
+    我們始終秉持「客戶至上、永續經營」的理念，重視每位員工的成長與付出。除了提供穩定的工作機會與完善的教育訓練，更打造互相協助、充滿活力的工作氛圍。歡迎對物流工作充滿熱忱、肯學習、負責任的您加入信林，與我們一起成長！
+  </p>
+</div>
+
+<p class="text-mute leading-relaxed max-w-2xl text-sm md:text-base reveal">
+    
     </p>
 
   </div>
@@ -224,68 +236,257 @@
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
 
-      <!-- 職缺列表卡片 -->
-      <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4 reveal">
+   <!-- 職缺區塊外層 CONTAINER -->
+<div class="lg:col-span-2">
 
-        <a href="https://www.chickpt.com.tw/job-qr3mAMqzqm7P" target="_blank" rel="noopener noreferrer"
-           class="group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
-          <div class="flex items-start justify-between gap-2 mb-2">
-            <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
-            <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
-          </div>
-          <h3 class="font-display font-bold text-lg mb-2">晚班 · 高雄前鎮</h3>
-          <p class="text-sm text-mute leading-relaxed">能接受搬運及理貨工作，具良好體能與工作熱忱，積極學習、態度佳，歡迎應徵。</p>
-        </a>
+  <!-- 1. 主區域分類頁籤（第一層：大區域） -->
+  <div class="flex flex-wrap gap-2 mb-3 border-b border-white/20 pb-4">
+    <button type="button" onclick="filterMainRegion('all', this)" 
+            class="main-region-btn active px-4 py-2 text-sm font-medium border border-white bg-white text-black transition-all">
+      全部區域
+    </button>
+    <button type="button" onclick="filterMainRegion('north', this)" 
+            class="main-region-btn px-4 py-2 text-sm font-medium border border-white/30 text-white/70 hover:border-white hover:text-white transition-all">
+      北區
+    </button>
+    <button type="button" onclick="filterMainRegion('central', this)" 
+            class="main-region-btn px-4 py-2 text-sm font-medium border border-white/30 text-white/70 hover:border-white hover:text-white transition-all">
+      中區
+    </button>
+    <button type="button" onclick="filterMainRegion('south', this)" 
+            class="main-region-btn px-4 py-2 text-sm font-medium border border-white/30 text-white/70 hover:border-white hover:text-white transition-all">
+      南區
+    </button>
+    <button type="button" onclick="filterMainRegion('east', this)" 
+            class="main-region-btn px-4 py-2 text-sm font-medium border border-white/30 text-white/70 hover:border-white hover:text-white transition-all">
+      東區
+    </button>
+    <button type="button" onclick="filterMainRegion('islands', this)" 
+            class="main-region-btn px-4 py-2 text-sm font-medium border border-white/30 text-white/70 hover:border-white hover:text-white transition-all">
+      外島
+    </button>
+  </div>
 
-        <a href="https://www.chickpt.com.tw/job-noj1W892r5bO" target="_blank" rel="noopener noreferrer"
-           class="group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
-          <div class="flex items-start justify-between gap-2 mb-2">
-            <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
-            <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
-          </div>
-          <h3 class="font-display font-bold text-lg mb-2">中班 · 高雄鳳山</h3>
-          <p class="text-sm text-mute leading-relaxed">無經驗可，只要願意學習、工作認真、態度積極，我們提供完整教育訓練，歡迎加入。</p>
-        </a>
+  <!-- 2. 子區域/縣市篩選頁籤（第二層：預設隱藏，點擊大區域後展開） -->
+  <div id="sub-region-container" class="hidden flex-wrap gap-2 mb-6 bg-white/5 p-3 rounded-lg border border-white/10 transition-all">
+    <!-- 子選單按鈕會透過 JavaScript 動態生成或切換顯示 -->
+  </div>
 
-        <a href="https://www.chickpt.com.tw/job-QjnmzDBqR5p9" target="_blank" rel="noopener noreferrer"
-           class="group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
-          <div class="flex items-start justify-between gap-2 mb-2">
-            <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
-            <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
-          </div>
-          <h3 class="font-display font-bold text-lg mb-2">大夜 · 台南永康</h3>
-          <p class="text-sm text-mute leading-relaxed">具備良好的時間觀念，工作認真細心，能獨立完成工作並配合團隊運作，長期任職者佳。</p>
-        </a>
+  <!-- 3. 職缺卡片列表（同時標註 data-region 與 data-city） -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 reveal" id="job-list">
 
-        <a href="https://www.104.com.tw/jobs/search/" target="_blank" rel="noopener noreferrer"
-           class="group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
-          <div class="flex items-start justify-between gap-2 mb-2">
-            <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
-            <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
-          </div>
-          <h3 class="font-display font-bold text-lg mb-2">大夜 · 新竹竹北</h3>
-          <p class="text-sm text-mute leading-relaxed">誠徵願意投入物流理貨工作的夥伴，具責任感、抗壓性佳、不怕辛苦，期待與您一起成長。</p>
-        </a>
-
-        <a href="https://www.chickpt.com.tw/job-r6b0D9aqYm82" target="_blank" rel="noopener noreferrer"
-           class="group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
-          <div class="flex items-start justify-between gap-2 mb-2">
-            <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
-            <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
-          </div>
-          <h3 class="font-display font-bold text-lg mb-2">大夜 · 彰化和美</h3>
-          <p class="text-sm text-mute leading-relaxed">誠徵願意投入物流理貨工作的夥伴，具責任感、抗壓性佳、不怕辛苦，期待與您一起成長。</p>
-        </a>
-
+    <!-- 北區：新竹縣 -->
+    <a href="https://www.104.com.tw/jobs/search/" target="_blank" rel="noopener noreferrer"
+       data-region="north" data-city="hsinchu county"
+       class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
+      <div class="flex items-start justify-between gap-2 mb-2">
+        <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
+        <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
       </div>
+      <h3 class="font-display font-bold text-lg mb-2">大夜 · 新竹竹北</h3>
+      <p class="text-sm text-mute leading-relaxed">誠徵願意投入物流理貨工作的夥伴，具責任感、抗壓性佳、不怕辛苦，期待與您一起成長。</p>
+    </a>
+
+    <!-- 中區：彰化 -->
+    <a href="https://www.chickpt.com.tw/job-r6b0D9aqYm82" target="_blank" rel="noopener noreferrer"
+       data-region="central" data-city="changhua"
+       class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
+      <div class="flex items-start justify-between gap-2 mb-2">
+        <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
+        <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
+      </div>
+      <h3 class="font-display font-bold text-lg mb-2">大夜 · 彰化和美</h3>
+      <p class="text-sm text-mute leading-relaxed">誠徵願意投入物流理貨工作的夥伴，具責任感、抗壓性佳、不怕辛苦，期待與您一起成長。</p>
+    </a>
+
+    <!-- 南區：台南 -->
+    <a href="https://www.chickpt.com.tw/job-QjnmzDBqR5p9" target="_blank" rel="noopener noreferrer"
+       data-region="south" data-city="tainan"
+       class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
+      <div class="flex items-start justify-between gap-2 mb-2">
+        <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
+        <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
+      </div>
+      <h3 class="font-display font-bold text-lg mb-2">大夜 · 台南永康</h3>
+      <p class="text-sm text-mute leading-relaxed">具備良好的時間觀念，工作認真細心，能獨立完成工作並配合團隊運作，長期任職者佳。</p>
+    </a>
+
+    <!-- 南區：高雄 -->
+    <a href="https://www.chickpt.com.tw/job-qr3mAMqzqm7P" target="_blank" rel="noopener noreferrer"
+       data-region="south" data-city="kaohsiung"
+       class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
+      <div class="flex items-start justify-between gap-2 mb-2">
+        <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
+        <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
+      </div>
+      <h3 class="font-display font-bold text-lg mb-2">晚班 · 高雄前鎮</h3>
+      <p class="text-sm text-mute leading-relaxed">能接受搬運及理貨工作，具良好體能與工作熱忱，積極學習、態度佳，歡迎應徵。</p>
+    </a>
+
+    <!-- 南區：高雄 -->
+    <a href="https://www.chickpt.com.tw/job-noj1W892r5bO" target="_blank" rel="noopener noreferrer"
+       data-region="south" data-city="kaohsiung"
+       class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
+      <div class="flex items-start justify-between gap-2 mb-2">
+        <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
+        <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
+      </div>
+      <h3 class="font-display font-bold text-lg mb-2">中班 · 高雄鳳山</h3>
+      <p class="text-sm text-mute leading-relaxed">無經驗可，只要願意學習、工作認真、態度積極，我們提供完整教育訓練，歡迎加入。</p>
+    </a>
+
+    <!-- 東區：台東 -->
+    <a href="https://www.chickpt.com.tw/job-zrn0gxVJKmgE" target="_blank" rel="noopener noreferrer"
+       data-region="east" data-city="taitung"
+       class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
+      <div class="flex items-start justify-between gap-2 mb-2">
+        <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
+        <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
+      </div>
+      <h3 class="font-display font-bold text-lg mb-2">清晨班 · 台東</h3>
+      <p class="text-sm text-mute leading-relaxed">誠徵願意投入物流理貨工作的夥伴，具責任感、抗壓性佳、不怕辛苦，期待與您一起成長。</p>
+    </a>
+
+  </div>
+
+  <!-- 4. 無職缺時的提示訊息 -->
+  <div id="no-jobs-msg" class="hidden text-center py-12 text-white/50 border border-dashed border-white/20">
+    目前該區域暫無開放的職缺，歡迎填寫上方表單主動投遞履歷！
+  </div>
+
+</div>
+
+<!-- 5. 雙層動態篩選的 JavaScript 程式碼 -->
+<script>
+  // 各大區域對應的縣市選單資料設定
+  const cityData = {
+    north: [
+      { id: 'all-north', name: '全北區', city: 'all' },
+      { id: 'keelung', name: '基隆市', city: 'Keelung' },
+      { id: 'taipei', name: '臺北市', city: 'taipei' },
+      { id: 'newtaipei', name: '新北市', city: 'newtaipei' },
+      { id: 'taoyuan', name: '桃園市', city: 'taoyuan' },
+      { id: 'hsinchu county', name: '新竹縣', city: 'hsinchu county' },
+      { id: 'hsinchu city', name: '新竹市', city: 'hsinchu city' },
+      { id: 'yilan', name: '宜蘭縣', city: 'yilan' }
+    ],
+    central: [
+      { id: 'all-central', name: '全中區', city: 'all' },
+      { id: 'miaoli', name: '苗栗縣', city: 'miaoli' },
+      { id: 'taichung', name: '臺中市', city: 'taichung' },
+      { id: 'changhua', name: '彰化縣', city: 'changhua' },
+      { id: 'nantou', name: '南投縣', city: 'nantou' },
+      { id: 'yunlin', name: '雲林縣', city: 'yunlin' }
+    ],
+    south: [
+      { id: 'all-south', name: '全南區', city: 'all' },
+      { id: 'chiayi city', name: '嘉義市', city: 'chiayi city' },
+      { id: 'chiaiy county', name: '嘉義縣', city: 'chiaiy county' },
+      { id: 'tainan', name: '臺南市', city: 'tainan' },
+      { id: 'kaohsiung', name: '高雄市', city: 'kaohsiung' },
+      { id: 'pingtung', name: '屏東縣', city: 'pingtung' }
+    ],
+    east: [
+      { id: 'all-east', name: '全東區', city: 'all' },
+      { id: 'hualien', name: '花蓮縣', city: 'hualien' },
+      { id: 'taitung', name: '台東縣', city: 'taitung' }
+    ],
+    islands: [
+      { id: 'all-islands', name: '全外島', city: 'all' },
+      { id: 'penghu', name: '澎湖', city: 'penghu' },
+      { id: 'kinmen', name: '金門', city: 'kinmen' }
+    ]
+  };
+
+  let currentMainRegion = 'all';
+
+  // 點擊第一層（大區域）
+  function filterMainRegion(region, btnElement) {
+    currentMainRegion = region;
+
+    // 1. 更新主按鈕高亮樣式
+    document.querySelectorAll('.main-region-btn').forEach(btn => {
+      btn.className = "main-region-btn px-4 py-2 text-sm font-medium border border-white/30 text-white/70 hover:border-white hover:text-white transition-all";
+    });
+    btnElement.className = "main-region-btn active px-4 py-2 text-sm font-medium border border-white bg-white text-black transition-all";
+
+    const subContainer = document.getElementById('sub-region-container');
+
+    // 2. 處理第二層縣市選單顯示與否
+    if (region === 'all' || !cityData[region]) {
+      subContainer.classList.add('hidden');
+      subContainer.classList.remove('flex');
+      filterJobs('all', 'all');
+    } else {
+      // 動態渲染第二層按鈕
+      let html = '';
+      cityData[region].forEach((item, index) => {
+        const activeClass = index === 0 
+          ? 'bg-white/20 text-white border-white' 
+          : 'text-white/60 border-transparent hover:text-white hover:border-white/30';
+        html += `
+          <button type="button" onclick="filterCity('${item.city}', this)" 
+                  class="sub-region-btn px-3 py-1.5 text-xs rounded border transition-all ${activeClass}">
+            ${item.name}
+          </button>
+        `;
+      });
+      subContainer.innerHTML = html;
+      subContainer.classList.remove('hidden');
+      subContainer.classList.add('flex');
+      
+      // 預設顯示該大區域下的所有職缺
+      filterJobs(region, 'all');
+    }
+  }
+
+  // 點擊第二層（特定縣市）
+  function filterCity(city, btnElement) {
+    document.querySelectorAll('.sub-region-btn').forEach(btn => {
+      btn.className = "sub-region-btn px-3 py-1.5 text-xs rounded border border-transparent text-white/60 hover:text-white hover:border-white/30 transition-all";
+    });
+    btnElement.className = "sub-region-btn px-3 py-1.5 text-xs rounded border border-white bg-white/20 text-white transition-all";
+
+    filterJobs(currentMainRegion, city);
+  }
+
+  // 執行最終的職缺卡片過濾
+  function filterJobs(region, city) {
+    const cards = document.querySelectorAll('.job-card');
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      const cardRegion = card.getAttribute('data-region');
+      const cardCity = card.getAttribute('data-city');
+
+      const matchRegion = (region === 'all' || cardRegion === region);
+      const matchCity = (city === 'all' || cardCity === city);
+
+      if (matchRegion && matchCity) {
+        card.style.display = 'block';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    // 處理無職缺時的提示訊息
+    const noJobsMsg = document.getElementById('no-jobs-msg');
+    if (visibleCount === 0) {
+      noJobsMsg.classList.remove('hidden');
+    } else {
+      noJobsMsg.classList.add('hidden');
+    }
+  }
+</script>
 
       <!-- 應徵方式說明 -->
       <div class="reveal border-t lg:border-t-0 lg:border-l border-white/20 pt-10 lg:pt-0 lg:pl-10">
         <h3 class="font-display font-bold text-lg mb-3">應徵方式</h3>
        <p class="text-sm text-white/85 leading-relaxed mb-6">
-  請將履歷寄至：<span class="font-semibold underline">xinlin20000121@gmail.com</span>，我們將於 5 個工作天內回覆面試安排。
+  請將履歷寄至：<a href="mailto:jengming.yu@seec.com.tw" class="font-semibold underline hover:text-white/70 transition-colors">jengming.yu@seec.com.tw</a>，我們將於 5 個工作天內回覆面試安排。
 </p>
-<a href="mailto:xinlin20000121@gmail.com" class="inline-flex items-center gap-3 bg-white text-black px-4 py-2 rounded-lg font-medium">
+<a href="mailto:jengming.yu@seec.com.tw" class="inline-flex items-center gap-3 bg-white text-black px-4 py-2 rounded-lg font-medium">
   寄送履歷 <span>→</span>
 </a>
       </div>
@@ -305,13 +506,13 @@
         <span class="block text-blue">讓信林陪您走這一段。</span>
       </h2>
       <p class="text-mute leading-relaxed mb-10 text-sm md:text-base">
-        無論您正在尋找物流理貨工作，或想了解更多職缺資訊，歡迎與我們聯繫，我們將於一個工作天內回覆您。
+        無論您正在尋找物流理貨工作，或是有任何問題，歡迎與我們聯繫，我們將於五個工作天內回覆您。
       </p>
 
       <ul class="space-y-4 font-mono text-sm">
         <li class="flex items-center gap-4 border-b border-hair pb-4">
           <span class="text-mute w-20 shrink-0">EMAIL</span>
-          <a href="mailto:xinlin20000121@gmail.com" class="text-ink hover:text-blue transition-colors">xinlin20000121@gmail.com</a>
+          <a href="mailto:jengming.yu@seec.com.tw" class="text-ink hover:text-blue transition-colors">jengming.yu@seec.com.tw</a>
         </li>
         <li class="flex items-center gap-4 border-b border-hair pb-4">
           <span class="text-mute w-20 shrink-0">電話</span>
