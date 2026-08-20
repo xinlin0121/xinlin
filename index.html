@@ -3,9 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>信林企業股份有限公司</title>
-<meta name="description" content="信林企業為士林電機關係企業與新竹物流合作夥伴，提供倉儲物流、包裝加工及專業人力派遣服務。熱烈徵才中！">
+<title>信林企業股份有限公司 — 專業倉儲物流與人才招募</title>
+<meta name="description" content="信林企業為士林電機關係企業與新竹物流合作夥伴，提供全台倉儲物流、包裝加工及專業人力派遣服務。熱烈徵才中！">
 <meta name="google-site-verification" content="nc3T2RjCeX7jMsytsnhHBz23WsbSr-_pYfHshN05p_M" />
+
+<!-- Open Graph 社群分享標籤 -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="信林企業股份有限公司 — 專業倉儲物流與人才招募">
+<meta property="og:description" content="士林電機關係企業，提供全台專業物流理貨、倉儲管理與派遣服務。熱烈徵才中！">
+<meta property="og:image" content="信林LOGO.jpg">
+
 <!-- Tailwind CSS CDN -->
 <script src="https://cdn.tailwindcss.com"></script>
 
@@ -19,12 +26,12 @@
     theme: {
       extend: {
         colors: {
-          paper:   '#FFFFFF',   // 主背景（白）
-          ink:     '#12151A',   // 主要文字（近黑）
-          mute:    '#63676F',   // 次要文字（灰）
-          hair:    '#E3E5E9',   // 分隔線／卡片邊框（淺灰）
-          panel:   '#F5F6F8',   // 淺灰底色區塊
-          blue:    '#1E4FD8',   // 主藍色板塊
+          paper:    '#FFFFFF',   // 主背景（白）
+          ink:      '#12151A',   // 主要文字（近黑）
+          mute:     '#63676F',   // 次要文字（灰）
+          hair:     '#E3E5E9',   // 分隔線／卡片邊框（淺灰）
+          panel:    '#F5F6F8',   // 淺灰底色區塊
+          blue:     '#1E4FD8',   // 主藍色板塊
           blueDeep: '#12318C', // 深藍（hover / 對比）
           blueSoft: '#EAF0FD', // 極淺藍底
         },
@@ -83,6 +90,63 @@
     .reveal { opacity: 1; transform: none; transition: none; }
   }
 </style>
+
+<!-- 1. 企業權威實體 (Organization Entity) 結構化資料 (AIO/GEO 極關鍵) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "信林企業股份有限公司",
+  "alternateName": ["Xinlin Enterprise Co., Ltd.", "信林企業"],
+  "vatID": "70538058",
+  "url": "https://www.seec.com.tw",
+  "logo": "信林LOGO.jpg",
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "士林電機廠股份有限公司",
+    "alternateName": "SEEC",
+    "sameAs": "https://zh.wikipedia.org/zh-tw/士林電機"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+886-3-5591589",
+    "contactType": "customer service",
+    "email": "jengming.yu@seec.com.tw",
+    "areaServed": "TW",
+    "availableLanguage": ["zh-Hant"]
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "中山北路6段90號12樓",
+    "addressLocality": "台北市士林區",
+    "postalCode": "111",
+    "addressCountry": "TW"
+  }
+}
+</script>
+
+<!-- 2. FAQ 結構化資料（利於 AI 直接引用與回答使用者提問） -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "信林企業提供哪些物流職缺？",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "信林企業主要招募全台各區的物流理貨人員，包含早班、中班、小夜班與大夜班等多種班別，無經驗者亦提供完整教育訓練。"
+    }
+  },{
+    "@type": "Question",
+    "name": "應徵信林企業理貨人員的管道有哪些？",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "可直接透過官網點選對應區域職缺投遞履歷，或將履歷寄至官方電子信箱 jengming.yu@seec.com.tw。"
+    }
+  }]
+}
+</script>
 </head>
 
 <body class="bg-paper text-ink font-body antialiased selection:bg-blue selection:text-white">
@@ -140,8 +204,7 @@
       </h1>
 
       <p class="mt-8 max-w-xl text-base md:text-lg text-mute leading-relaxed reveal">
-        信林致力於提供穩健可靠的專業服務，結合豐富產業經驗與嚴謹的執行團隊，
-        陪伴每一位夥伴。
+        信林致力於提供穩健可靠的專業服務，結合豐富產業經驗與嚴謹的執行團隊，陪伴每一位夥伴。
       </p>
 
       <div class="mt-10 flex flex-wrap items-center gap-4 reveal">
@@ -160,8 +223,7 @@
         <p class="font-mono text-xs uppercase tracking-widest text-white/70">Since</p>
         <p class="font-display text-6xl font-bold leading-none">2000</p>
         <p class="text-sm text-white/80 leading-relaxed">
-          從第一天開始，我們就以「信」為名，
-          與每位夥伴攜手前行，共同成為值得信賴的物流夥伴。
+          從第一天開始，我們就以「信」為名，與每位夥伴攜手前行，共同成為值得信賴的物流夥伴。
         </p>
       </div>
     </div>
@@ -196,22 +258,18 @@
     </h2>
 
     <div class="text-mute leading-relaxed max-w-2xl text-sm md:text-base reveal space-y-4">
-  <p>
-    信林企業股份有限公司成立於西元 2000 年，為士林電機關係企業，並與國內各大知名物流業、製造業及高科技產業建立長期合作關係。我們憑藉全台完善的營運網路與豐富的實務經驗，持續為客戶提供高效率且值得信賴的專業服務。
-  </p>
-  
-  <p>
-    我們專注於提供倉儲物流理貨、人力服務、機械設備安裝及清潔綠化等項目。在信林，理貨工作不只是搬運貨物，更包含貨物整理、分類、拆櫃、裝卸、出入庫作業及現場協作等，每一位夥伴都是物流運作不可或缺的重要角色。
-  </p>
-  
-  <p>
-    我們始終秉持「客戶至上、永續經營」的理念，重視每位員工的成長與付出。除了提供穩定的工作機會與完善的教育訓練，更打造互相協助、充滿活力的工作氛圍。歡迎對物流工作充滿熱忱、肯學習、負責任的您加入信林，與我們一起成長！
-  </p>
-</div>
-
-<p class="text-mute leading-relaxed max-w-2xl text-sm md:text-base reveal">
-    
-    </p>
+      <p>
+        <strong>信林企業股份有限公司</strong>成立於西元 2000 年，為<strong>士林電機（SEEC）</strong>關係企業，並與<strong>新竹物流（HCT Logistics）</strong>及國內各大知名物流業、製造業、高科技產業建立長期合作關係。我們憑藉全台完善的營運網路與豐富的實務經驗，持續為客戶提供高效率且值得信賴的專業服務。
+      </p>
+      
+      <p>
+        我們專注於提供倉儲物流理貨、人力服務、機械設備安裝及清潔綠化等項目。在信林，理貨工作不只是搬運貨物，更包含貨物整理、分類、拆櫃、裝卸、出入庫作業及現場協作等，每一位夥伴都是物流運作不可或缺的重要角色。
+      </p>
+      
+      <p>
+        我們始終秉持「客戶至上、永續經營」的理念，重視每位員工的成長與付出。除了提供穩定的工作機會與完善的教育訓練，更打造互相協助、充滿活力的工作氛圍。歡迎對物流工作充滿熱忱、肯學習、負責任的您加入信林，與我們一起成長！
+      </p>
+    </div>
 
   </div>
 </section>
@@ -229,303 +287,184 @@
         </h2>
       </div>
       <p class="text-white/80 leading-relaxed max-w-sm text-sm md:text-base">
-        我們重視每一位夥伴的成長，提供完整的教育訓練與清楚的晉升路徑，
-        歡迎對專業服務有熱忱的您加入我們。
+        我們重視每一位夥伴的成長，提供完整的教育訓練與清楚的晉升路徑，歡迎對專業服務有熱忱的您加入我們。
       </p>
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
 
-   <!-- 職缺區塊外層 CONTAINER -->
-<div class="lg:col-span-2">
+      <!-- 職缺區塊外層 CONTAINER -->
+      <div class="lg:col-span-2">
 
-  <!-- 1. 主區域分類頁籤（第一層：大區域） -->
-  <div class="flex flex-wrap gap-2 mb-3 border-b border-white/20 pb-4">
-    <button type="button" onclick="filterMainRegion('all', this)" 
-            class="main-region-btn active px-4 py-2 text-sm font-medium border border-white bg-white text-black transition-all">
-      全部區域
-    </button>
-    <button type="button" onclick="filterMainRegion('north', this)" 
-            class="main-region-btn px-4 py-2 text-sm font-medium border border-white/30 text-white/70 hover:border-white hover:text-white transition-all">
-      北區
-    </button>
-    <button type="button" onclick="filterMainRegion('central', this)" 
-            class="main-region-btn px-4 py-2 text-sm font-medium border border-white/30 text-white/70 hover:border-white hover:text-white transition-all">
-      中區
-    </button>
-    <button type="button" onclick="filterMainRegion('south', this)" 
-            class="main-region-btn px-4 py-2 text-sm font-medium border border-white/30 text-white/70 hover:border-white hover:text-white transition-all">
-      南區
-    </button>
-    <button type="button" onclick="filterMainRegion('east', this)" 
-            class="main-region-btn px-4 py-2 text-sm font-medium border border-white/30 text-white/70 hover:border-white hover:text-white transition-all">
-      東區
-    </button>
-    <button type="button" onclick="filterMainRegion('islands', this)" 
-            class="main-region-btn px-4 py-2 text-sm font-medium border border-white/30 text-white/70 hover:border-white hover:text-white transition-all">
-      外島
-    </button>
-  </div>
-
-  <!-- 2. 子區域/縣市篩選頁籤（第二層：預設隱藏，點擊大區域後展開） -->
-  <div id="sub-region-container" class="hidden flex-wrap gap-2 mb-6 bg-white/5 p-3 rounded-lg border border-white/10 transition-all">
-    <!-- 子選單按鈕會透過 JavaScript 動態生成或切換顯示 -->
-  </div>
-
-  <!-- 3. 職缺卡片列表（同時標註 data-region 與 data-city） -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 reveal" id="job-list">
-
-    <!-- 北區：桃園市 -->
-    <a href="https://www.chickpt.com.tw/job-Ma60dBz3l17A" target="_blank" rel="noopener noreferrer"
-       data-region="north" data-city="taoyuan"
-       class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
-      <div class="flex items-start justify-between gap-2 mb-2">
-        <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
-        <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
-      </div>
-      <h3 class="font-display font-bold text-lg mb-2">早班 · 桃園大溪</h3>
-      <p class="text-sm text-mute leading-relaxed">誠徵願意投入物流理貨工作的夥伴，具責任感、抗壓性佳、不怕辛苦，期待與您一起成長。</p>
-    </a>
-
-<!-- 北區：新竹縣 -->
-    <a href="https://www.chickpt.com.tw/job-kKZm4r4X95Qy" target="_blank" rel="noopener noreferrer"
-       data-region="north" data-city="hsinchu county"
-       class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
-      <div class="flex items-start justify-between gap-2 mb-2">
-        <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
-        <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
-      </div>
-      <h3 class="font-display font-bold text-lg mb-2">大夜 · 新竹新豐</h3>
-      <p class="text-sm text-mute leading-relaxed">具備良好的時間觀念，工作認真細心，能獨立完成工作並配合團隊運作，長期任職者佳。</p>
-    </a>
-
-    <!-- 北區：新竹縣 -->
-    <a href="https://www.chickpt.com.tw/job-Ma60dGGKl57A" target="_blank" rel="noopener noreferrer"
-       data-region="north" data-city="hsinchu county"
-       class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
-      <div class="flex items-start justify-between gap-2 mb-2">
-        <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
-        <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
-      </div>
-      <h3 class="font-display font-bold text-lg mb-2">大夜 · 新竹竹東</h3>
-      <p class="text-sm text-mute leading-relaxed">歡迎對物流工作有興趣的夥伴加入，只要具責任感、肯學習、配合度高，我們都期待您的加入。</p>
-    </a>
-
-    <!-- 北區：新竹市 -->
-    <a href="https://www.chickpt.com.tw/job-Dlk0lNWMN1G2" target="_blank" rel="noopener noreferrer"
-       data-region="north" data-city="hsinchu city"
-       class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
-      <div class="flex items-start justify-between gap-2 mb-2">
-        <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
-        <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
-      </div>
-      <h3 class="font-display font-bold text-lg mb-2">小夜 · 新竹東區</h3>
-      <p class="text-sm text-mute leading-relaxed">無經驗可，只要願意學習、工作認真、態度積極，我們提供完整教育訓練，歡迎加入。</p>
-    </a>
-    
-    <!-- 中區：彰化 -->
-    <a href="https://www.chickpt.com.tw/job-r6b0D9aqYm82" target="_blank" rel="noopener noreferrer"
-       data-region="central" data-city="changhua"
-       class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
-      <div class="flex items-start justify-between gap-2 mb-2">
-        <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
-        <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
-      </div>
-      <h3 class="font-display font-bold text-lg mb-2">大夜 · 彰化和美</h3>
-      <p class="text-sm text-mute leading-relaxed">誠徵願意投入物流理貨工作的夥伴，具責任感、抗壓性佳、不怕辛苦，期待與您一起成長。</p>
-    </a>
-
-    <!-- 南區：台南 -->
-    <a href="https://www.chickpt.com.tw/job-QjnmzDBqR5p9" target="_blank" rel="noopener noreferrer"
-       data-region="south" data-city="tainan"
-       class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
-      <div class="flex items-start justify-between gap-2 mb-2">
-        <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
-        <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
-      </div>
-      <h3 class="font-display font-bold text-lg mb-2">大夜 · 台南永康</h3>
-      <p class="text-sm text-mute leading-relaxed">具備良好的時間觀念，工作認真細心，能獨立完成工作並配合團隊運作，長期任職者佳。</p>
-    </a>
-
-    <!-- 南區：高雄 -->
-    <a href="https://www.chickpt.com.tw/job-qr3mAMqzqm7P" target="_blank" rel="noopener noreferrer"
-       data-region="south" data-city="kaohsiung"
-       class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
-      <div class="flex items-start justify-between gap-2 mb-2">
-        <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
-        <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
-      </div>
-      <h3 class="font-display font-bold text-lg mb-2">晚班 · 高雄前鎮</h3>
-      <p class="text-sm text-mute leading-relaxed">能接受搬運及理貨工作，具良好體能與工作熱忱，積極學習、態度佳，歡迎應徵。</p>
-    </a>
-
-    <!-- 南區：高雄 -->
-    <a href="https://www.chickpt.com.tw/job-noj1W892r5bO" target="_blank" rel="noopener noreferrer"
-       data-region="south" data-city="kaohsiung"
-       class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
-      <div class="flex items-start justify-between gap-2 mb-2">
-        <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
-        <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
-      </div>
-      <h3 class="font-display font-bold text-lg mb-2">中班 · 高雄鳳山</h3>
-      <p class="text-sm text-mute leading-relaxed">無經驗可，只要願意學習、工作認真、態度積極，我們提供完整教育訓練，歡迎加入。</p>
-    </a>
-
-    <!-- 東區：台東 -->
-    <a href="https://www.chickpt.com.tw/job-zrn0gxVJKmgE" target="_blank" rel="noopener noreferrer"
-       data-region="east" data-city="taitung"
-       class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
-      <div class="flex items-start justify-between gap-2 mb-2">
-        <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
-        <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
-      </div>
-      <h3 class="font-display font-bold text-lg mb-2">清晨班 · 台東</h3>
-      <p class="text-sm text-mute leading-relaxed">誠徵願意投入物流理貨工作的夥伴，具責任感、抗壓性佳、不怕辛苦，期待與您一起成長。</p>
-    </a>
-
-  </div>
-
-  <!-- 4. 無職缺時的提示訊息 -->
-  <div id="no-jobs-msg" class="hidden text-center py-12 text-white/50 border border-dashed border-white/20">
-    目前該區域暫無開放的職缺，歡迎主動投遞履歷！
-  </div>
-
-</div>
-
-<!-- 5. 雙層動態篩選的 JavaScript 程式碼 -->
-<script>
-  // 各大區域對應的縣市選單資料設定
-  const cityData = {
-    north: [
-      { id: 'all-north', name: '全北區', city: 'all' },
-      { id: 'keelung', name: '基隆市', city: 'Keelung' },
-      { id: 'taipei', name: '臺北市', city: 'taipei' },
-      { id: 'newtaipei', name: '新北市', city: 'newtaipei' },
-      { id: 'taoyuan', name: '桃園市', city: 'taoyuan' },
-      { id: 'hsinchu county', name: '新竹縣', city: 'hsinchu county' },
-      { id: 'hsinchu city', name: '新竹市', city: 'hsinchu city' },
-      { id: 'yilan', name: '宜蘭縣', city: 'yilan' }
-    ],
-    central: [
-      { id: 'all-central', name: '全中區', city: 'all' },
-      { id: 'miaoli', name: '苗栗縣', city: 'miaoli' },
-      { id: 'taichung', name: '臺中市', city: 'taichung' },
-      { id: 'changhua', name: '彰化縣', city: 'changhua' },
-      { id: 'nantou', name: '南投縣', city: 'nantou' },
-      { id: 'yunlin', name: '雲林縣', city: 'yunlin' }
-    ],
-    south: [
-      { id: 'all-south', name: '全南區', city: 'all' },
-      { id: 'chiayi city', name: '嘉義市', city: 'chiayi city' },
-      { id: 'chiaiy county', name: '嘉義縣', city: 'chiaiy county' },
-      { id: 'tainan', name: '臺南市', city: 'tainan' },
-      { id: 'kaohsiung', name: '高雄市', city: 'kaohsiung' },
-      { id: 'pingtung', name: '屏東縣', city: 'pingtung' }
-    ],
-    east: [
-      { id: 'all-east', name: '全東區', city: 'all' },
-      { id: 'hualien', name: '花蓮縣', city: 'hualien' },
-      { id: 'taitung', name: '台東縣', city: 'taitung' }
-    ],
-    islands: [
-      { id: 'all-islands', name: '全外島', city: 'all' },
-      { id: 'penghu', name: '澎湖', city: 'penghu' },
-      { id: 'kinmen', name: '金門', city: 'kinmen' }
-    ]
-  };
-
-  let currentMainRegion = 'all';
-
-  // 點擊第一層（大區域）
-  function filterMainRegion(region, btnElement) {
-    currentMainRegion = region;
-
-    // 1. 更新主按鈕高亮樣式
-    document.querySelectorAll('.main-region-btn').forEach(btn => {
-      btn.className = "main-region-btn px-4 py-2 text-sm font-medium border border-white/30 text-white/70 hover:border-white hover:text-white transition-all";
-    });
-    btnElement.className = "main-region-btn active px-4 py-2 text-sm font-medium border border-white bg-white text-black transition-all";
-
-    const subContainer = document.getElementById('sub-region-container');
-
-    // 2. 處理第二層縣市選單顯示與否
-    if (region === 'all' || !cityData[region]) {
-      subContainer.classList.add('hidden');
-      subContainer.classList.remove('flex');
-      filterJobs('all', 'all');
-    } else {
-      // 動態渲染第二層按鈕
-      let html = '';
-      cityData[region].forEach((item, index) => {
-        const activeClass = index === 0 
-          ? 'bg-white/20 text-white border-white' 
-          : 'text-white/60 border-transparent hover:text-white hover:border-white/30';
-        html += `
-          <button type="button" onclick="filterCity('${item.city}', this)" 
-                  class="sub-region-btn px-3 py-1.5 text-xs rounded border transition-all ${activeClass}">
-            ${item.name}
+        <!-- 1. 主區域分類頁籤（第一層：大區域） -->
+        <div class="flex flex-wrap gap-2 mb-3 border-b border-white/20 pb-4">
+          <button type="button" onclick="filterMainRegion('all', this)" 
+                  class="main-region-btn active px-4 py-2 text-sm font-medium border border-white bg-white text-black transition-all">
+            全部區域
           </button>
-        `;
-      });
-      subContainer.innerHTML = html;
-      subContainer.classList.remove('hidden');
-      subContainer.classList.add('flex');
-      
-      // 預設顯示該大區域下的所有職缺
-      filterJobs(region, 'all');
-    }
-  }
+          <button type="button" onclick="filterMainRegion('north', this)" 
+                  class="main-region-btn px-4 py-2 text-sm font-medium border border-white/30 text-white/70 hover:border-white hover:text-white transition-all">
+            北區
+          </button>
+          <button type="button" onclick="filterMainRegion('central', this)" 
+                  class="main-region-btn px-4 py-2 text-sm font-medium border border-white/30 text-white/70 hover:border-white hover:text-white transition-all">
+            中區
+          </button>
+          <button type="button" onclick="filterMainRegion('south', this)" 
+                  class="main-region-btn px-4 py-2 text-sm font-medium border border-white/30 text-white/70 hover:border-white hover:text-white transition-all">
+            南區
+          </button>
+          <button type="button" onclick="filterMainRegion('east', this)" 
+                  class="main-region-btn px-4 py-2 text-sm font-medium border border-white/30 text-white/70 hover:border-white hover:text-white transition-all">
+            東區
+          </button>
+          <button type="button" onclick="filterMainRegion('islands', this)" 
+                  class="main-region-btn px-4 py-2 text-sm font-medium border border-white/30 text-white/70 hover:border-white hover:text-white transition-all">
+            外島
+          </button>
+        </div>
 
-  // 點擊第二層（特定縣市）
-  function filterCity(city, btnElement) {
-    document.querySelectorAll('.sub-region-btn').forEach(btn => {
-      btn.className = "sub-region-btn px-3 py-1.5 text-xs rounded border border-transparent text-white/60 hover:text-white hover:border-white/30 transition-all";
-    });
-    btnElement.className = "sub-region-btn px-3 py-1.5 text-xs rounded border border-white bg-white/20 text-white transition-all";
+        <!-- 2. 子區域/縣市篩選頁籤（第二層：預設隱藏，點擊大區域後展開） -->
+        <div id="sub-region-container" class="hidden flex-wrap gap-2 mb-6 bg-white/5 p-3 rounded-lg border border-white/10 transition-all">
+        </div>
 
-    filterJobs(currentMainRegion, city);
-  }
+        <!-- 3. 職缺卡片列表（補齊薪資與具體地址 data 屬性） -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 reveal" id="job-list">
 
-  // 執行最終的職缺卡片過濾
-  function filterJobs(region, city) {
-    const cards = document.querySelectorAll('.job-card');
-    let visibleCount = 0;
 
-    cards.forEach(card => {
-      const cardRegion = card.getAttribute('data-region');
-      const cardCity = card.getAttribute('data-city');
+          <!-- 北區：新北市 -->
+          <a href="https://www.chickpt.com.tw/job-QJlmXqWjR1XZ" target="_blank" rel="noopener noreferrer"
+             data-region="north" data-city="newtaipei"
+             data-salary="240" data-unit="HOUR" data-street="八里區商港五路"
+             class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
+              <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
+            </div>
+            <h3 class="font-display font-bold text-lg mb-1">大夜 · 新北八里</h3>
+            <p class="font-mono text-xs font-bold text-blue mb-2">時薪 NT$ 240</p>
+            <p class="text-sm text-mute leading-relaxed">誠徵願意投入物流理貨工作的夥伴，具責任感、抗壓性佳、不怕辛苦，期待與您一起成長。</p>
+          </a>
 
-      const matchRegion = (region === 'all' || cardRegion === region);
-      const matchCity = (city === 'all' || cardCity === city);
+             <!-- 北區：桃園市 -->
+          <a href="https://www.chickpt.com.tw/job-kKZm4r4X95Qy" target="_blank" rel="noopener noreferrer"
+             data-region="north" data-city="taoyuan"
+             data-salary="212-213" data-unit="HOUR" data-street="平鎮區延平路"
+             class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
+              <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
+            </div>
+            <h3 class="font-display font-bold text-lg mb-1">大夜 · 桃園平鎮</h3>
+            <p class="font-mono text-xs font-bold text-blue mb-2">時薪 NT$ 212-213</p>
+            <p class="text-sm text-mute leading-relaxed">歡迎對物流工作有興趣的夥伴加入，只要具責任感、肯學習、配合度高，我們都期待您的加入。</p>
+          </a>
 
-      if (matchRegion && matchCity) {
-        card.style.display = 'block';
-        visibleCount++;
-      } else {
-        card.style.display = 'none';
-      }
-    });
+                <!-- 北區：新竹縣 -->
+          <a href="https://www.chickpt.com.tw/job-kKZm4r4X95Qy" target="_blank" rel="noopener noreferrer"
+             data-region="north" data-city="hsinchu county"
+             data-salary="212-213" data-unit="HOUR" data-street="新豐鄉德昌街"
+             class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
+              <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
+            </div>
+            <h3 class="font-display font-bold text-lg mb-1">大夜 · 新竹新豐</h3>
+            <p class="font-mono text-xs font-bold text-blue mb-2">時薪 NT$ 212-213</p>
+            <p class="text-sm text-mute leading-relaxed">具備良好的時間觀念，工作認真細心，能獨立完成工作並配合團隊運作，長期任職者佳。</p>
+          </a>
 
-    // 處理無職缺時的提示訊息
-    const noJobsMsg = document.getElementById('no-jobs-msg');
-    if (visibleCount === 0) {
-      noJobsMsg.classList.remove('hidden');
-    } else {
-      noJobsMsg.classList.add('hidden');
-    }
-  }
-</script>
+ 
+          <!-- 北區：新竹市 -->
+          <a href="https://www.chickpt.com.tw/job-Dlk0lNWMN1G2" target="_blank" rel="noopener noreferrer"
+             data-region="north" data-city="hsinchu city"
+             data-salary="197-198" data-unit="HOUR" data-street="東區忠孝路"
+             class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
+              <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
+            </div>
+            <h3 class="font-display font-bold text-lg mb-1">小夜 · 新竹東區</h3>
+            <p class="font-mono text-xs font-bold text-blue mb-2">時薪 NT$ 197-198</p>
+            <p class="text-sm text-mute leading-relaxed">無經驗可，只要願意學習、工作認真、態度積極，我們提供完整教育訓練，歡迎加入。</p>
+          </a>
+          
+   
+          <!-- 南區：台南 -->
+          <a href="https://www.chickpt.com.tw/job-QjnmzDBqR5p9" target="_blank" rel="noopener noreferrer"
+             data-region="south" data-city="tainan"
+             data-salary="200-207" data-unit="HOUR" data-street="永康區仁愛街"
+             class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
+              <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
+            </div>
+            <h3 class="font-display font-bold text-lg mb-1">大夜/冷鏈 · 台南永康</h3>
+            <p class="font-mono text-xs font-bold text-blue mb-2">時薪 NT$ 200-207</p>
+            <p class="text-sm text-mute leading-relaxed">具備良好的時間觀念，工作認真細心，能獨立完成工作並配合團隊運作，長期任職者佳。</p>
+          </a>
 
-<!-- 應徵方式說明 -->
-<div class="reveal border-t lg:border-t-0 lg:border-l border-white/20 pt-10 lg:pt-0 lg:pl-10">
-  <h3 class="font-display font-bold text-lg mb-3">應徵方式</h3>
-  <p class="text-sm text-white/85 leading-relaxed mb-6">
-    請將履歷寄至：<a href="https://mail.google.com/mail/?view=cm&fs=1&to=jengming.yu@seec.com.tw" target="_blank" rel="noopener noreferrer" class="font-semibold underline hover:text-white/70 transition-colors">jengming.yu@seec.com.tw</a>，我們將於 5 個工作天內回覆面試安排。
-  </p>
-  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jengming.yu@seec.com.tw" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 bg-white text-black px-4 py-2 rounded-lg font-medium">
-    寄送履歷 <span>→</span>
-  </a>
-</div>
+          <!-- 南區：高雄 -->
+          <a href="https://www.chickpt.com.tw/job-qr3mAMqzqm7P" target="_blank" rel="noopener noreferrer"
+             data-region="south" data-city="kaohsiung"
+             data-salary="196" data-unit="HOUR" data-street="前鎮區擴建路"
+             class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
+              <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
+            </div>
+            <h3 class="font-display font-bold text-lg mb-1">晚班 · 高雄前鎮</h3>
+            <p class="font-mono text-xs font-bold text-blue mb-2">時薪 NT$ 196</p>
+            <p class="text-sm text-mute leading-relaxed">能接受搬運及理貨工作，具良好體能與工作熱忱，積極學習、態度佳，歡迎應徵。</p>
+          </a>
+
+          <!-- 南區：高雄 -->
+          <a href="https://www.chickpt.com.tw/job-noj1W892r5bO" target="_blank" rel="noopener noreferrer"
+             data-region="south" data-city="kaohsiung"
+             data-salary="210" data-unit="HOUR" data-street="前鎮區中安路(紅毛港國小對面)"
+             class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
+              <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
+            </div>
+            <h3 class="font-display font-bold text-lg mb-1">中班 · 高雄鳳山</h3>
+            <p class="font-mono text-xs font-bold text-blue mb-2">時薪 NT$ 210</p>
+            <p class="text-sm text-mute leading-relaxed">無經驗可，只要願意學習、工作認真、態度積極，我們提供完整教育訓練，歡迎加入。</p>
+          </a>
+
+          <!-- 東區：台東 -->
+          <a href="https://www.chickpt.com.tw/job-zrn0gxVJKmgE" target="_blank" rel="noopener noreferrer"
+             data-region="east" data-city="taitung"
+             data-salary="205-210" data-unit="HOUR" data-street="台東市中興路"
+             class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
+              <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
+            </div>
+            <h3 class="font-display font-bold text-lg mb-1">清晨班 · 台東</h3>
+            <p class="font-mono text-xs font-bold text-blue mb-2">時薪 NT$ 205-210</p>
+            <p class="text-sm text-mute leading-relaxed">誠徵願意投入物流理貨工作的夥伴，具責任感、抗壓性佳、不怕辛苦，期待與您一起成長。</p>
+          </a>
+
+        </div>
+
+        <!-- 4. 無職缺時的提示訊息 -->
+        <div id="no-jobs-msg" class="hidden text-center py-12 text-white/50 border border-dashed border-white/20">
+          目前該區域暫無開放的職缺，歡迎主動投遞履歷！
+        </div>
+
+      </div>
+
+      <!-- 應徵方式說明 -->
+      <div class="reveal border-t lg:border-t-0 lg:border-l border-white/20 pt-10 lg:pt-0 lg:pl-10">
+        <h3 class="font-display font-bold text-lg mb-3">應徵方式</h3>
+        <p class="text-sm text-white/85 leading-relaxed mb-6">
+          請將履歷寄至：<a href="mailto:jengming.yu@seec.com.tw" class="font-semibold underline hover:text-white/70 transition-colors">jengming.yu@seec.com.tw</a>，我們將於 5 個工作天內回覆面試安排。
+        </p>
+        <a href="mailto:jengming.yu@seec.com.tw" class="inline-flex items-center gap-3 bg-white text-black px-4 py-2 rounded-lg font-medium hover:bg-white/90 transition-colors">
+          寄送履歷 <span>→</span>
+        </a>
+      </div>
 
     </div>
   </div>
@@ -570,14 +509,133 @@
 
     <div class="flex items-center gap-3 order-2 md:order-1">
       <img src="信林LOGO.jpg" alt="信林 Logo" class="h-7 w-auto object-contain">
-      <p class="font-mono text-xs text-mute">© 2026 信林企業股份有限公司 保留所有權利。</p>
+      <div class="font-mono text-xs text-mute leading-relaxed">
+        <p>© 2026 信林企業股份有限公司 All Rights Reserved.</p>
+        <p class="text-[10px] text-mute/70">統一編號：70538058 ｜ 士林電機關係企業</p>
+      </div>
     </div>
 
   </div>
 </footer>
 
-<!-- JavaScript 功能：選單切換 ＋ 淡入效果 ＋ 自動生成 JSON-LD 結構化資料 -->
+<!-- JavaScript 功能：區域篩選 ＋ 選單切換 ＋ 淡入效果 ＋ 自動生成 JobPosting JSON-LD -->
 <script>
+  // 各大區域對應的縣市選單資料設定（修復拼字與對應關係）
+  const cityData = {
+    north: [
+      { id: 'all-north', name: '全北區', city: 'all' },
+      { id: 'keelung', name: '基隆市', city: 'keelung' },
+      { id: 'taipei', name: '臺北市', city: 'taipei' },
+      { id: 'newtaipei', name: '新北市', city: 'newtaipei' },
+      { id: 'taoyuan', name: '桃園市', city: 'taoyuan' },
+      { id: 'hsinchu-county', name: '新竹縣', city: 'hsinchu county' },
+      { id: 'hsinchu-city', name: '新竹市', city: 'hsinchu city' },
+      { id: 'yilan', name: '宜蘭縣', city: 'yilan' }
+    ],
+    central: [
+      { id: 'all-central', name: '全中區', city: 'all' },
+      { id: 'miaoli', name: '苗栗縣', city: 'miaoli' },
+      { id: 'taichung', name: '臺中市', city: 'taichung' },
+      { id: 'changhua', name: '彰化縣', city: 'changhua' },
+      { id: 'nantou', name: '南投縣', city: 'nantou' },
+      { id: 'yunlin', name: '雲林縣', city: 'yunlin' }
+    ],
+    south: [
+      { id: 'all-south', name: '全南區', city: 'all' },
+      { id: 'chiayi-city', name: '嘉義市', city: 'chiayi city' },
+      { id: 'chiayi-county', name: '嘉義縣', city: 'chiayi county' },
+      { id: 'tainan', name: '臺南市', city: 'tainan' },
+      { id: 'kaohsiung', name: '高雄市', city: 'kaohsiung' },
+      { id: 'pingtung', name: '屏東縣', city: 'pingtung' }
+    ],
+    east: [
+      { id: 'all-east', name: '全東區', city: 'all' },
+      { id: 'hualien', name: '花蓮縣', city: 'hualien' },
+      { id: 'taitung', name: '台東縣', city: 'taitung' }
+    ],
+    islands: [
+      { id: 'all-islands', name: '全外島', city: 'all' },
+      { id: 'penghu', name: '澎湖', city: 'penghu' },
+      { id: 'kinmen', name: '金門', city: 'kinmen' }
+    ]
+  };
+
+  let currentMainRegion = 'all';
+
+  // 點擊第一層（大區域）
+  function filterMainRegion(region, btnElement) {
+    currentMainRegion = region;
+
+    document.querySelectorAll('.main-region-btn').forEach(btn => {
+      btn.className = "main-region-btn px-4 py-2 text-sm font-medium border border-white/30 text-white/70 hover:border-white hover:text-white transition-all";
+    });
+    btnElement.className = "main-region-btn active px-4 py-2 text-sm font-medium border border-white bg-white text-black transition-all";
+
+    const subContainer = document.getElementById('sub-region-container');
+
+    if (region === 'all' || !cityData[region]) {
+      subContainer.classList.add('hidden');
+      subContainer.classList.remove('flex');
+      filterJobs('all', 'all');
+    } else {
+      let html = '';
+      cityData[region].forEach((item, index) => {
+        const activeClass = index === 0 
+          ? 'bg-white/20 text-white border-white' 
+          : 'text-white/60 border-transparent hover:text-white hover:border-white/30';
+        html += `
+          <button type="button" onclick="filterCity('${item.city}', this)" 
+                  class="sub-region-btn px-3 py-1.5 text-xs rounded border transition-all ${activeClass}">
+            ${item.name}
+          </button>
+        `;
+      });
+      subContainer.innerHTML = html;
+      subContainer.classList.remove('hidden');
+      subContainer.classList.add('flex');
+      
+      filterJobs(region, 'all');
+    }
+  }
+
+  // 點擊第二層（特定縣市）
+  function filterCity(city, btnElement) {
+    document.querySelectorAll('.sub-region-btn').forEach(btn => {
+      btn.className = "sub-region-btn px-3 py-1.5 text-xs rounded border border-transparent text-white/60 hover:text-white hover:border-white/30 transition-all";
+    });
+    btnElement.className = "sub-region-btn px-3 py-1.5 text-xs rounded border border-white bg-white/20 text-white transition-all";
+
+    filterJobs(currentMainRegion, city);
+  }
+
+  // 執行最終的職缺卡片過濾
+  function filterJobs(region, city) {
+    const cards = document.querySelectorAll('.job-card');
+    let visibleCount = 0;
+
+    cards.forEach(card => {
+      const cardRegion = card.getAttribute('data-region');
+      const cardCity = card.getAttribute('data-city');
+
+      const matchRegion = (region === 'all' || cardRegion === region);
+      const matchCity = (city === 'all' || cardCity === city);
+
+      if (matchRegion && matchCity) {
+        card.style.display = 'block';
+        visibleCount++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    const noJobsMsg = document.getElementById('no-jobs-msg');
+    if (visibleCount === 0) {
+      noJobsMsg.classList.remove('hidden');
+    } else {
+      noJobsMsg.classList.add('hidden');
+    }
+  }
+
   // 手機版選單開關
   const menuBtn = document.getElementById('menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
@@ -619,52 +677,68 @@
   }, { threshold: 0.12 });
   revealEls.forEach(el => observer.observe(el));
 
-  // 自動根據 HTML 職缺卡片生成 JSON-LD 結構化資料
+  // 自動根據 HTML 職缺卡片生成完整且合規的 JobPosting JSON-LD 結構化資料
   window.addEventListener('DOMContentLoaded', () => {
-    const jobCards = document.querySelectorAll('#recruitment a[href*="chickpt"], #recruitment a[href*="104"]');
+    const jobCards = document.querySelectorAll('#recruitment .job-card');
     const jobPostings = [];
 
     jobCards.forEach((card, index) => {
       const category = card.querySelector('p.font-mono')?.textContent.trim() || '物流理貨人員';
-      const subtitle = card.querySelector('h3')?.textContent.trim() || ''; // 例："晚班 · 高雄前鎮"
-      const description = card.querySelector('p.text-sm')?.textContent.trim() || '';
+      const subtitle = card.querySelector('h3')?.textContent.trim() || ''; 
+      const description = card.querySelector('p.text-sm:not(.font-mono)')?.textContent.trim() || '';
       const url = card.getAttribute('href') || '';
 
-      // 解析班別與地點（如："晚班" 與 "高雄前鎮"）
       const parts = subtitle.split('·').map(s => s.trim());
       const shift = parts[0] || '';
       const locationStr = parts[1] || '';
 
+      // 抓取精準 data 屬性
+      const salaryVal = card.getAttribute('data-salary') || '190';
+      const salaryUnit = card.getAttribute('data-unit') || 'HOUR';
+      const currency = card.getAttribute('data-currency') || 'TWD';
+      const streetAddress = card.getAttribute('data-street') || '';
+
       jobPostings.push({
         "@context": "https://schema.org/",
         "@type": "JobPosting",
-        "title": `${category}（${shift}）`,
+        "title": `${category}（${subtitle}）`,
         "description": description,
         "identifier": {
           "@type": "PropertyValue",
           "name": "信林企業股份有限公司",
-          "value": `JOB-AUTO-${index + 1}`
+          "value": `XL-JOB-${index + 1}`
         },
-        "datePosted": "2026-07-30",
+        "datePosted": "2026-08-01",
+        "validThrough": "2026-12-31",
         "employmentType": "FULL_TIME",
         "hiringOrganization": {
           "@type": "Organization",
           "name": "信林企業股份有限公司",
-          "sameAs": url
+          "sameAs": "https://www.seec.com.tw",
+          "logo": "信林LOGO.jpg"
         },
         "jobLocation": {
           "@type": "Place",
           "address": {
             "@type": "PostalAddress",
+            "streetAddress": streetAddress,
             "addressLocality": locationStr,
             "addressCountry": "TW"
+          }
+        },
+        "baseSalary": {
+          "@type": "MonetaryAmount",
+          "currency": currency,
+          "value": {
+            "@type": "QuantitativeValue",
+            "value": Number(salaryVal),
+            "unitText": salaryUnit
           }
         },
         "workHours": shift
       });
     });
 
-    // 動態將產生好的 JSON-LD 注入到 <head> 區塊中
     if (jobPostings.length > 0) {
       const script = document.createElement('script');
       script.type = 'application/ld+json';
