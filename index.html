@@ -19,7 +19,7 @@
 <!-- Google Fonts：Noto Sans TC（中文主字體）／ Space Grotesk（英數標籤）／ JetBrains Mono（數據、Eyebrow） -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@500;600;700&display=swap" rel="stylesheet">
 
 <script>
   tailwind.config = {
@@ -35,10 +35,10 @@
           blueDeep: '#12318C', // 深藍（hover / 對比）
           blueSoft: '#EAF0FD', // 極淺藍底
         },
-        fontFamily: {
+      fontFamily: {
   display: ['"Inter"', '"Noto Sans TC"', 'sans-serif'],
   body: ['"Inter"', '"Noto Sans TC"', 'sans-serif'],
-  mono: ['"JetBrains Mono"', 'monospace'],
+  mono: ['"Inter"', 'monospace'], // 這裡改成 Inter 就不會帶有 JetBrains Mono 的斜線 0
 },
       },
     },
@@ -338,11 +338,11 @@
              data-salary="240" data-unit="HOUR" data-street="八里區商港五路"
              class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
             <div class="flex items-start justify-between gap-2 mb-2">
-              <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
+              <p class="font-display text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
               <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
             </div>
             <h3 class="font-display font-bold text-lg mb-1">大夜 · 新北八里</h3>
-            <p class="font-mono text-xs font-bold text-blue mb-2">時薪 NT$ 240</p>
+            <p class="font-display text-xs font-bold text-blue mb-2">時薪 NT$ 240</p>
             <p class="text-sm text-mute leading-relaxed">誠徵願意投入物流理貨工作的夥伴，具責任感、抗壓性佳、不怕辛苦，期待與您一起成長。</p>
           </a>
 
@@ -352,11 +352,11 @@
              data-salary="212-213" data-unit="HOUR" data-street="平鎮區延平路"
              class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
             <div class="flex items-start justify-between gap-2 mb-2">
-              <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
+              <p class="font-display text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
               <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
             </div>
             <h3 class="font-display font-bold text-lg mb-1">大夜 · 桃園平鎮</h3>
-            <p class="font-mono text-xs font-bold text-blue mb-2">時薪 NT$ 212-213</p>
+            <p class="font-display text-xs font-bold text-blue mb-2">時薪 NT$ 212-213</p>
             <p class="text-sm text-mute leading-relaxed">歡迎對物流工作有興趣的夥伴加入，只要具責任感、肯學習、配合度高，我們都期待您的加入。</p>
           </a>
 
@@ -366,11 +366,11 @@
              data-salary="212-213" data-unit="HOUR" data-street="新豐鄉德昌街"
              class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
             <div class="flex items-start justify-between gap-2 mb-2">
-              <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
+              <p class="font-display text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
               <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
             </div>
             <h3 class="font-display font-bold text-lg mb-1">大夜 · 新竹新豐</h3>
-            <p class="font-mono text-xs font-bold text-blue mb-2">時薪 NT$ 212-213</p>
+            <p class="font-display text-xs font-bold text-blue mb-2">時薪 NT$ 212-213</p>
             <p class="text-sm text-mute leading-relaxed">具備良好的時間觀念，工作認真細心，能獨立完成工作並配合團隊運作，長期任職者佳。</p>
           </a>
 
@@ -381,11 +381,11 @@
              data-salary="197-198" data-unit="HOUR" data-street="東區忠孝路"
              class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
             <div class="flex items-start justify-between gap-2 mb-2">
-              <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
+              <p class="font-display text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
               <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
             </div>
             <h3 class="font-display font-bold text-lg mb-1">小夜 · 新竹東區</h3>
-            <p class="font-mono text-xs font-bold text-blue mb-2">時薪 NT$ 197-198</p>
+            <p class="font-display text-xs font-bold text-blue mb-2">時薪 NT$ 197-198</p>
             <p class="text-sm text-mute leading-relaxed">無經驗可，只要願意學習、工作認真、態度積極，我們提供完整教育訓練，歡迎加入。</p>
           </a>
           
@@ -396,11 +396,11 @@
              data-salary="200-207" data-unit="HOUR" data-street="永康區仁愛街"
              class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
             <div class="flex items-start justify-between gap-2 mb-2">
-              <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
+              <p class="font-display text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
               <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
             </div>
             <h3 class="font-display font-bold text-lg mb-1">大夜/冷鏈 · 台南永康</h3>
-            <p class="font-mono text-xs font-bold text-blue mb-2">時薪 NT$ 200-207</p>
+            <p class="font-display text-xs font-bold text-blue mb-2">時薪 NT$ 200-207</p>
             <p class="text-sm text-mute leading-relaxed">具備良好的時間觀念，工作認真細心，能獨立完成工作並配合團隊運作，長期任職者佳。</p>
           </a>
 
@@ -410,11 +410,11 @@
              data-salary="196" data-unit="HOUR" data-street="前鎮區擴建路"
              class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
             <div class="flex items-start justify-between gap-2 mb-2">
-              <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
+              <p class="font-display text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
               <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
             </div>
             <h3 class="font-display font-bold text-lg mb-1">晚班 · 高雄前鎮</h3>
-            <p class="font-mono text-xs font-bold text-blue mb-2">時薪 NT$ 196</p>
+            <p class="font-display text-xs font-bold text-blue mb-2">時薪 NT$ 196</p>
             <p class="text-sm text-mute leading-relaxed">能接受搬運及理貨工作，具良好體能與工作熱忱，積極學習、態度佳，歡迎應徵。</p>
           </a>
 
@@ -424,11 +424,11 @@
              data-salary="210" data-unit="HOUR" data-street="前鎮區中安路(紅毛港國小對面)"
              class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
             <div class="flex items-start justify-between gap-2 mb-2">
-              <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
+              <p class="font-display text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
               <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
             </div>
             <h3 class="font-display font-bold text-lg mb-1">中班 · 高雄鳳山</h3>
-            <p class="font-mono text-xs font-bold text-blue mb-2">時薪 NT$ 210</p>
+            <p class="font-display text-xs font-bold text-blue mb-2">時薪 NT$ 210</p>
             <p class="text-sm text-mute leading-relaxed">無經驗可，只要願意學習、工作認真、態度積極，我們提供完整教育訓練，歡迎加入。</p>
           </a>
 
@@ -438,11 +438,11 @@
              data-salary="205-210" data-unit="HOUR" data-street="台東市中興路"
              class="job-card group bg-white text-ink p-6 border border-white/0 hover:border-white transition-colors block">
             <div class="flex items-start justify-between gap-2 mb-2">
-              <p class="font-mono text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
+              <p class="font-display text-xs uppercase tracking-widest text-blue">物流理貨人員</p>
               <span aria-hidden="true" class="text-mute group-hover:text-blue transition-colors shrink-0">↗</span>
             </div>
             <h3 class="font-display font-bold text-lg mb-1">清晨班 · 台東</h3>
-            <p class="font-mono text-xs font-bold text-blue mb-2">時薪 NT$ 205-210</p>
+            <p class="font-display text-xs font-bold text-blue mb-2">時薪 NT$ 205-210</p>
             <p class="text-sm text-mute leading-relaxed">誠徵願意投入物流理貨工作的夥伴，具責任感、抗壓性佳、不怕辛苦，期待與您一起成長。</p>
           </a>
 
